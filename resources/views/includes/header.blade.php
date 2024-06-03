@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/kasir">Data Agregat</a>
+                    <a class="nav-link active" aria-current="page" href="/agregat">Data Agregat</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -22,7 +22,7 @@
                         Data
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/produk">Warga</a></li>
+                        <li><a class="dropdown-item" href="/warga">Warga</a></li>
                         <li><a class="dropdown-item" href="/users">User</a></li>
                     </ul>
                 </li>
