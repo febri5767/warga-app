@@ -31,7 +31,7 @@ class WargaSeeder extends Seeder
                 'tempat_lahir' => 'Jambi',
                 'tgl_lahir' => '2006-06-15',
                 'jenis_kelamin' => 'Perempuan',
-                'status' => 'Kawin',
+                'status' => 'Belum Kawin',
                 'pekerjaan' => 'Karyawan',
                 'gol_dar' => 'B',
             ]

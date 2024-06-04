@@ -31,7 +31,6 @@ class UserSeeder extends Seeder
                 'level' => 'admin',
                 'password' => bcrypt('qwe'),
             ],
-            // Add more users as needed
         ];
 
         // Insert data into the users table

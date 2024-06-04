@@ -21,39 +21,24 @@
                     <th>Golongan Darah</th>
                     <th>Action</th>
                 </tr>
-
-                <tr>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>zxc</td>
-                    <td>qwe</td>
-                    <td>
-                        <div class="d-flex justify-content-around">
-                            <a href="/warga/edit/{0}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
-                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>zxc</td>
-                    <td>qwe</td>
-                    <td>
-                        <div class="d-flex justify-content-around">
-                            <a href="/warga/edit/{0}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
-                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
-                        </div>
-                    </td>
-                </tr>
-
+                @foreach ($warga as $wrg)
+                    <tr>
+                        <td>{{ $wrg->nama }}</td>
+                        <td>{{ $wrg->tempat_lahir }}</td>
+                        <td>{{ $wrg->tgl_lahir }}</td>
+                        <td>{{ $wrg->jenis_kelamin }}</td>
+                        <td>{{ $wrg->status }}</td>
+                        <td>{{ $wrg->pekerjaan }}</td>
+                        <td>{{ $wrg->gol_dar }}</td>
+                        <td>
+                            <div class="d-flex justify-content-around">
+                                <a href="/warga/edit/{{ $wrg->id }}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
+                                <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
+                
             </table>
         </div>
     </div>

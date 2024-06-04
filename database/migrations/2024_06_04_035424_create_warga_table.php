@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string("nama");
             $table->string("tempat_lahir");
             $table->date("tgl_lahir");
-            $table->enum('jenis_kelamin', ['laki-laki', 'perempuan'])->default('laki-laki');
-            $table->enum('status', ['belum_kawin', 'kawin','cerai_hidup','cerai_mati'])->default('belum_kawin');
-            $table->enum('gol_dar', ['tidak_tahu', 'a','b','ab','o'])->default('tidak_tahu');
+            $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan'])->default('laki-laki');
+            $table->enum('status', ['Belum Kawin', 'Kawin','Cerai Hidup','Cerai Mati'])->default('Belum Kawin');
+            $table->enum('gol_dar', ['Tidak Tahu', 'A','B','AB','O'])->default('Tidak Tahu');
             $table->string("pekerjaan");
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable();

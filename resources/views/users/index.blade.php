@@ -20,33 +20,22 @@
                     <th>Action</th>
                 </tr>
 
-                <tr>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asdasdasdasdasdasdasdasdasdas</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>
-                        <div class="d-flex justify-content-around">
-                            <a href="/users/edit/{0}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
-                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>
-                        <div class="d-flex justify-content-around">
-                            <a href="/users/edit/{0}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
-                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
-                        </div>
-                    </td>
-                </tr>
+                @foreach ($users as $usr)
+                    <tr>
+                        <td>{{ $usr->name }}</td>
+                        <td>{{ $usr->username }}</td>
+                        <td>{{ $usr->email }}</td>
+                        <td>{{ $usr->nomor_hp }}</td>
+                        <td>{{ $usr->level }}</td>
+                        <td>
+                            <div class="d-flex justify-content-around">
+                                <a href="/users/edit/{{ $usr->id }}" class="btn btn-primary"><i
+                                        class="fas fa-user-edit"></i> Edit</a>
+                                <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
+                            </div>
+                        </td>
+                    </tr>
+                @endforeach
 
             </table>
         </div>
