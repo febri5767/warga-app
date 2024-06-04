@@ -69,8 +69,9 @@
                         <label for="pekerjaan" class="form-label">Pekerjaan</label>
                         <input type="text" class="form-control" name="pekerjaan" id="pekerjaan" placeholder="Pekerjaan">
                     </div>
-
-                    <button class="btn btn-primary"> <i class="fas fa-save"></i> Simpan</button>
+                    <div class="row align-items-end">
+                        <button class="btn btn-primary"> <i class="fas fa-save"></i> Simpan</button>
+                    </div>
                 </div>
             </form>
         </div>

@@ -27,7 +27,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/logout">Biodata</a>
+                    <a class="nav-link" href="/biodata">Biodata</a>
                 </li>
 
             </ul>
