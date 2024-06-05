@@ -8,7 +8,7 @@
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-body">
-                                    <h5 class="card-title">Login Sistem Rekap Warga</h5>
+                                    <h3 class="card-title text-center">Sistem Rekap Warga</h3>
                                     @error('login_gagal')
                                         <div class="alert alert-warning alert-dismissible fade show" role="alert">
                                             <strong>Warning!</strong> {{ $message }}

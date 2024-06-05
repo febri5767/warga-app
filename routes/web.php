@@ -24,4 +24,5 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/biodata', [BiodataController::class, 'index']);
     Route::get('/agregat', [DataAgregatController::class, 'index']);
+    Route::get('/', [DataAgregatController::class, 'index']);
 });

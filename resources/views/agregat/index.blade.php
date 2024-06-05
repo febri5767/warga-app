@@ -7,48 +7,34 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="mb-3 ">
-                <a href="/users/tambah" class="btn btn-success"><i class="fas fa-user-plus"></i> Tambah User</a>
+            <div class="d-flex aligns-items-center justify-content-center card text-center w-75 mx-auto">
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-white bg-primary mt-1 mx-1" style="max-width: 18rem;">
+                            <div class="card-header">Laki-Laki</div>
+                            <div class="card-body">
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-danger mt-1 mx-1" style="max-width: 18rem;">
+                            <div class="card-header">Perempuan</div>
+                            <div class="card-body">
+                                <h1>1</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-success mt-1 mx-1" style="max-width: 18rem;">
+                            <div class="card-header">Total</div>
+                            <div class="card-body">
+                                <h1>2</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <table class="table table-bordered table-striped">
-                <tr>
-                    <th>Nama</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Nomor HP</th>
-                    <th>Level</th>
-                    <th>Action</th>
-                </tr>
-
-                <tr>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asdasdasdasdasdasdasdasdasdas</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>
-                        <div class="d-flex justify-content-around">
-                            <a href="/users/edit/{0}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
-                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>asd</td>
-                    <td>
-                        <div class="d-flex justify-content-around">
-                            <a href="/users/edit/{0}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
-                            <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
-                        </div>
-                    </td>
-                </tr>
-
-            </table>
         </div>
     </div>
 @endsection
