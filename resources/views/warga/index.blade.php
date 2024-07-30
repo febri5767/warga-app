@@ -7,8 +7,15 @@
             </div>
         </div>
         <div class="card-body">
-            <div class="mb-3 ">
+            @if ($message = Session::get('success'))
+                <p>{{ $message }}</p>
+            @endif
+            <div class="d-flex justify-content-between align-items-center mb-3">
                 <a href="/warga/tambah" class="btn btn-success"><i class="fas fa-user-plus"></i> Tambah Warga</a>
+
+                {{-- <div class="input_search">
+                    <input id="input_search" class="form-control form-control-sm" type="text" placeholder="Nama">
+                </div> --}}
             </div>
             <table class="table table-bordered table-striped">
                 <tr>
@@ -26,20 +33,67 @@
                         <td>{{ $wrg->nama }}</td>
                         <td>{{ $wrg->tempat_lahir }}</td>
                         <td>{{ $wrg->tgl_lahir }}</td>
-                        <td>{{ $wrg->jenis_kelamin }}</td>
-                        <td>{{ $wrg->status }}</td>
+                        <td>
+                            @foreach ($data_kelamin as $kelamin)
+                                @if ($kelamin->id == $wrg->kelamin_id)
+                                    {{ $kelamin->kelamin }}
+                                @endif
+                            @endforeach
+                        </td>
+                        <td>
+                            @foreach ($data_status as $status)
+                                @if ($status->id == $wrg->status_id)
+                                    {{ $status->status }}
+                                @endif
+                            @endforeach
+                        </td>
+                        <td>
+                            @foreach ($data_goldar as $goldar)
+                                @if ($goldar->id == $wrg->goldar_id)
+                                    {{ $goldar->goldar }}
+                                @endif
+                            @endforeach
+                        </td>
                         <td>{{ $wrg->pekerjaan }}</td>
-                        <td>{{ $wrg->goldar }}</td>
                         <td>
                             <div class="d-flex justify-content-around">
-                                <a href="/warga/edit/{{ $wrg->id }}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>
+                                <a href="/warga/edit/{{ $wrg->id }}" class="btn btn-primary"><i
+                                        class="fas fa-user-edit"></i> Edit</a>
                                 <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
                             </div>
                         </td>
                     </tr>
                 @endforeach
-                
+                <tbody id="Content"></tbody>
             </table>
         </div>
     </div>
+@endsection
+
+@section('js')
+    {{-- <script>
+        // $(document).ready(function() {
+        //     // Menangani submit form untuk produk
+        //     // $("#input_search").on('keyup', function() {
+        //     //      var nama = $(this).val();
+        //     //     $.ajax({
+        //     //         url: "{{ url('searchNama') }}"  + '/' + nama,
+        //     //         type: "get",
+        //     //         data: {
+        //     //             'nama': nama
+        //     //         },
+        //     //         success: function(response) {
+        //     //             // Callback sukses
+        //     //             console.log(response); // Menampilkan respon di konsol
+        //     //             $('#Content').html(response);
+        //     //         },
+        //     //         error: function(error) {
+        //     //             // Callback kesalahan
+        //     //             alert('Terjadi kesalahan saat mengirim data');
+        //     //             console.error("Error:", error);
+        //     //         }
+        //     //     });
+        //     // });
+        // });
+    </script> --}}
 @endsection

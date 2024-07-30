@@ -18,9 +18,9 @@ class Warga extends Model
         'nama',
         'tempat_lahir',
         'tgl_lahir',
-        'jenis_kelamin',
-        'status',
-        'goldar',
+        'kelamin_id',
+        'status_id',
+        'goldar_id',
         'pekerjaan',
         'created_by',
         'updated_by'
