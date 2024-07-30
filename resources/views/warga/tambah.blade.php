@@ -5,7 +5,7 @@
             Tambah Warga
         </div>
         <div class="card-body">
-            <form action="">
+            <form action="{{ route('warga.proses_tambah') }}" method="POST">
                 <div class="container">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
@@ -53,9 +53,9 @@
                         </div>
                         <div class="col">
                             <div class="mb-3">
-                                <label for="gol_dar" class="form-label">Golongan Darah</label>
-                                <select class="form-select" aria-label="Default select example" name="gol_dar"
-                                    id="gol_dar">
+                                <label for="goldar" class="form-label">Golongan Darah</label>
+                                <select class="form-select" aria-label="Default select example" name="goldar"
+                                    id="goldar">
                                     <option selected>Tidak tahu</option>
                                     <option value="1">A</option>
                                     <option value="2">B</option>

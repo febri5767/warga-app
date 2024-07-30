@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('warga', function (Blueprint $table) {
-            $table->id();
+            $table->id()->primary();
             $table->string("nama");
             $table->string("tempat_lahir");
             $table->date("tgl_lahir");
-            $table->enum('jenis_kelamin', ['Laki-Laki', 'Perempuan'])->default('laki-laki');
-            $table->enum('status', ['Belum Kawin', 'Kawin','Cerai Hidup','Cerai Mati'])->default('Belum Kawin');
-            $table->enum('gol_dar', ['Tidak Tahu', 'A','B','AB','O'])->default('Tidak Tahu');
+            $table->unsignedBigInteger('kelamin_id');
+            $table->unsignedBigInteger('status_id');
+            $table->unsignedBigInteger('goldar_id');
             $table->string("pekerjaan");
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->nullable();
@@ -27,6 +27,10 @@ return new class extends Migration
 
             $table->foreign('created_by')->references('id')->on('users');
             $table->foreign('updated_by')->references('id')->on('users');
+            
+            $table->foreign('kelamin_id')->references('id')->on('m_kelamin');
+            $table->foreign('status_id')->references('id')->on('m_status');
+            $table->foreign('goldar_id')->references('id')->on('m_goldar');
         });
     }
 

@@ -20,25 +20,33 @@ class WargaSeeder extends Seeder
                 'nama' => 'Febri',
                 'tempat_lahir' => 'Batang',
                 'tgl_lahir' => '1994-06-15',
-                'jenis_kelamin' => 'Laki-laki',
-                'status' => 'Kawin',
+                'kelamin_id' => '1',
+                'status_id' => '2',
                 'pekerjaan' => 'Sopir',
-                'gol_dar' => 'A',
+                'goldar_id' => '1',
             ],
             [
                 'id' => '2',
                 'nama' => 'Ara',
                 'tempat_lahir' => 'Jambi',
                 'tgl_lahir' => '2006-06-15',
-                'jenis_kelamin' => 'Perempuan',
-                'status' => 'Belum Kawin',
+                'kelamin_id' => '2',
+                'status_id' => '1',
                 'pekerjaan' => 'Karyawan',
-                'gol_dar' => 'B',
+                'goldar_id' => '2',
+            ],
+            [
+                'id' => '3',
+                'nama' => 'Rara',
+                'tempat_lahir' => 'Semarang',
+                'tgl_lahir' => '2000-06-15',
+                'kelamin_id' => '2',
+                'status_id' => '1',
+                'pekerjaan' => 'Karyawan',
+                'goldar_id' => '4',
             ]
-            // Add more produks as needed
         ];
 
-        // Insert data into the produk table
         DB::table('warga')->insert($warga);
     }
 }

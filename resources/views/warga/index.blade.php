@@ -29,7 +29,7 @@
                         <td>{{ $wrg->jenis_kelamin }}</td>
                         <td>{{ $wrg->status }}</td>
                         <td>{{ $wrg->pekerjaan }}</td>
-                        <td>{{ $wrg->gol_dar }}</td>
+                        <td>{{ $wrg->goldar }}</td>
                         <td>
                             <div class="d-flex justify-content-around">
                                 <a href="/warga/edit/{{ $wrg->id }}" class="btn btn-primary"><i class="fas fa-user-edit"></i> Edit</a>

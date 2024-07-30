@@ -20,7 +20,7 @@ class Warga extends Model
         'tgl_lahir',
         'jenis_kelamin',
         'status',
-        'gol_dar',
+        'goldar',
         'pekerjaan',
         'created_by',
         'updated_by'
