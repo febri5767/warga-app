@@ -67,6 +67,7 @@
                 @endforeach
                 {{-- <tbody id="Content"></tbody> --}}
             </table>
+            {!! $warga->withQueryString()->links('pagination::bootstrap-5') !!}
         </div>
     </div>
 @endsection
@@ -83,7 +84,7 @@
             $(document).on('click', '.delete-warga', function() {
                 var dataURL = $(this).data('url');
                 var trObj = $(this);
-                
+
                 if (confirm("Apakah anda yakin akan menghapus?") == true) {
                     $.ajax({
                         url: dataURL,

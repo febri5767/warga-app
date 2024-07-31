@@ -12,7 +12,8 @@ class WargaController extends Controller
 {
     public function index()
     {
-        $warga = Warga::all();
+        // $warga = Warga::all();
+        $warga = Warga::paginate(10);
         $data_kelamin = M_kelamin::all();
         $data_status = M_status::all();
         $data_goldar = M_goldar::all();
