@@ -131,7 +131,7 @@ class WargaSeeder extends Seeder
                 'tempat_lahir' => 'Denpasar',
                 'tgl_lahir' => '1983-09-30',
                 'kelamin_id' => '2',
-                'status_id' => '2',
+                'status_id' => '3',
                 'pekerjaan' => 'Arsitek',
                 'goldar_id' => '4',
             ],
@@ -161,7 +161,7 @@ class WargaSeeder extends Seeder
                 'tempat_lahir' => 'Bogor',
                 'tgl_lahir' => '1989-10-10',
                 'kelamin_id' => '1',
-                'status_id' => '2',
+                'status_id' => '4',
                 'pekerjaan' => 'Tentara',
                 'goldar_id' => '3',
             ],
@@ -193,7 +193,7 @@ class WargaSeeder extends Seeder
                 'kelamin_id' => '2',
                 'status_id' => '2',
                 'pekerjaan' => 'Pramugari',
-                'goldar_id' => '1',
+                'goldar_id' => '5',
             ],
             [
                 'id' => '19',
@@ -201,7 +201,7 @@ class WargaSeeder extends Seeder
                 'tempat_lahir' => 'Cirebon',
                 'tgl_lahir' => '1982-07-21',
                 'kelamin_id' => '1',
-                'status_id' => '2',
+                'status_id' => '3',
                 'pekerjaan' => 'Nelayan',
                 'goldar_id' => '3',
             ],
@@ -213,7 +213,7 @@ class WargaSeeder extends Seeder
                 'kelamin_id' => '2',
                 'status_id' => '1',
                 'pekerjaan' => 'Mahasiswa',
-                'goldar_id' => '4',
+                'goldar_id' => '5',
             ]
         ];
         
