@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('username')->unique();
             $table->enum('level', ['user', 'admin'])->default('user');
-            $table->string('nomor_hp');
+            $table->string('nomer_hp');
             $table->rememberToken();
             $table->timestamps();
         });

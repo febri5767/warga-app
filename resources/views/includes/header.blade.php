@@ -23,7 +23,9 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/warga">Warga</a></li>
-                        <li><a class="dropdown-item" href="/users">User</a></li>
+                        @if (Auth::user()->level == 'admin')
+                            <li><a class="dropdown-item" href="/users">User</a></li>
+                        @endif
                     </ul>
                 </li>
                 <li class="nav-item">

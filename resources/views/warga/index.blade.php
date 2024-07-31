@@ -80,15 +80,10 @@
                 }
             });
 
-            /*------------------------------------------
-            --------------------------------------------
-            When click user on Delete Button
-            --------------------------------------------
-            --------------------------------------------*/
             $(document).on('click', '.delete-warga', function() {
                 var dataURL = $(this).data('url');
                 var trObj = $(this);
-                // alert(dataURL);
+                
                 if (confirm("Apakah anda yakin akan menghapus?") == true) {
                     $.ajax({
                         url: dataURL,

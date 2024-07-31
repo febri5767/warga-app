@@ -25,19 +25,46 @@
                         <td>{{ $usr->name }}</td>
                         <td>{{ $usr->username }}</td>
                         <td>{{ $usr->email }}</td>
-                        <td>{{ $usr->nomor_hp }}</td>
+                        <td>{{ $usr->nomer_hp }}</td>
                         <td>{{ $usr->level }}</td>
                         <td>
                             <div class="d-flex justify-content-around">
                                 <a href="/users/edit/{{ $usr->id }}" class="btn btn-primary"><i
                                         class="fas fa-user-edit"></i> Edit</a>
-                                <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
+                                <a href="javascript:void(0)" data-url="{{ route('users.delete', $usr->id) }}" class="btn btn-danger delete-user"><i class="fas fa-user-times"></i> Hapus</a>
                             </div>
                         </td>
                     </tr>
                 @endforeach
-
             </table>
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $(document).on('click', '.delete-user', function() {
+                var dataURL = $(this).data('url');
+                var trObj = $(this);
+
+                if (confirm("Apakah anda yakin akan menghapus?") == true) {
+                    $.ajax({
+                        url: dataURL,
+                        type: 'delete',
+                        dataType: 'json',
+                        success: function(data) {
+                            trObj.parents("tr").remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 @endsection
