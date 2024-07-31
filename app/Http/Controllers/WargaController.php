@@ -117,10 +117,9 @@ class WargaController extends Controller
         return redirect('/warga');
     }
 
-    public function proses_delete(Request $request)
+    public function proses_delete($id)
     {
-        $id = $request->id;
-        Warga::where('id',$id)->delete();
-        return redirect('/warga');
+        Warga::find($id)->delete();
+        return response()->json(['success' => 'Delete Berhasil!']);
     }
 }

@@ -17,11 +17,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/warga', [WargaController::class, 'index'])->name('warga.index');
     Route::get('/warga/tambah', [WargaController::class, 'tambah']);
     Route::post('/warga/proses_tambah', [WargaController::class, 'proses_tambah'])->name('warga.proses_tambah');
+    Route::delete('warga/delete/{id}', [WargaController::class, 'proses_delete'])->name('warga.delete');
     //Route::get('searchNama/{nama}', [WargaController::class, 'searchNama']);
 
     Route::get('/warga/edit/{id}', [WargaController::class, 'edit']);
     Route::post('/warga/proses_edit', [WargaController::class, 'proses_edit'])->name('warga.proses_edit');
-    
+
     Route::get('/biodata', [BiodataController::class, 'index']);
     Route::get('/agregat', [DataAgregatController::class, 'index']);
     Route::get('/', [DataAgregatController::class, 'index']);

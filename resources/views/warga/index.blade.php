@@ -59,21 +59,48 @@
                             <div class="d-flex justify-content-around">
                                 <a href="/warga/edit/{{ $wrg->id }}" class="btn btn-primary"><i
                                         class="fas fa-user-edit"></i> Edit</a>
-                                <a href="" class="btn btn-danger"><i class="fas fa-user-times"></i> Hapus</a>
+                                <a href="javascript:void(0)" data-url="{{ route('warga.delete', $wrg->id) }}"
+                                    class="btn btn-danger delete-warga"><i class="fas fa-user-times"></i> Hapus</a>
                             </div>
                         </td>
                     </tr>
                 @endforeach
-                <tbody id="Content"></tbody>
+                {{-- <tbody id="Content"></tbody> --}}
             </table>
         </div>
     </div>
 @endsection
 
 @section('js')
-    {{-- <script>
-        // $(document).ready(function() {
-        //     // Menangani submit form untuk produk
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            /*------------------------------------------
+            --------------------------------------------
+            When click user on Delete Button
+            --------------------------------------------
+            --------------------------------------------*/
+            $(document).on('click', '.delete-warga', function() {
+                var dataURL = $(this).data('url');
+                var trObj = $(this);
+                // alert(dataURL);
+                if (confirm("Apakah anda yakin akan menghapus?") == true) {
+                    $.ajax({
+                        url: dataURL,
+                        type: 'delete',
+                        dataType: 'json',
+                        success: function(data) {
+                            trObj.parents("tr").remove();
+                        }
+                    });
+                }
+            });
+        });
         //     // $("#input_search").on('keyup', function() {
         //     //      var nama = $(this).val();
         //     //     $.ajax({
@@ -95,5 +122,5 @@
         //     //     });
         //     // });
         // });
-    </script> --}}
+    </script>
 @endsection
