@@ -89,6 +89,7 @@ class WargaController extends Controller
             "data_goldar" => M_goldar::all(),
         ];
         return view('warga.edit',compact('data'));
+        // dd($data);
     }
 
     public function proses_edit(Request $request)
@@ -113,6 +114,13 @@ class WargaController extends Controller
             'pekerjaan' => $request->pekerjaan,
         );
         Warga::where('id',$id)->update($data);
+        return redirect('/warga');
+    }
+
+    public function proses_delete(Request $request)
+    {
+        $id = $request->id;
+        Warga::where('id',$id)->delete();
         return redirect('/warga');
     }
 }

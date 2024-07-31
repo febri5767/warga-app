@@ -12,7 +12,7 @@
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama"
-                            value="{{ $data['warga']->tempat_tinggal }}">
+                            value="{{ $data['warga']->nama }}">
                     </div>
                     <div class="row align-items-start">
                         <div class="col">
@@ -39,7 +39,7 @@
                                     id="kelamin_id">
                                     @foreach ($data['data_kelamin'] as $kelamin)
                                         <option @if ($kelamin->id == $data['warga']->kelamin_id) selected @endif
-                                            value="{{ $kelamin->id }}">{{ $kelamin_id->kelamin_id }}</option>
+                                            value="{{ $kelamin->id }}">{{ $kelamin->kelamin }}</option>
                                     @endforeach
                                 </select>
                             </div>

@@ -18,10 +18,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/warga/tambah', [WargaController::class, 'tambah']);
     Route::post('/warga/proses_tambah', [WargaController::class, 'proses_tambah'])->name('warga.proses_tambah');
     //Route::get('searchNama/{nama}', [WargaController::class, 'searchNama']);
-    Route::post('/warga/proses_edit', [WargaController::class, 'proses_edit'])->name('warga.proses_edit');
 
     Route::get('/warga/edit/{id}', [WargaController::class, 'edit']);
-
+    Route::post('/warga/proses_edit', [WargaController::class, 'proses_edit'])->name('warga.proses_edit');
+    
     Route::get('/biodata', [BiodataController::class, 'index']);
     Route::get('/agregat', [DataAgregatController::class, 'index']);
     Route::get('/', [DataAgregatController::class, 'index']);
